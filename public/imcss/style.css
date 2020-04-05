@@ -1,0 +1,267 @@
+html{
+	display:flex;
+	flex-wrap: wrap;
+}
+html,body{
+	width:100%;
+	margin: 0;
+	padding: 0;
+}
+.header{
+	background-image: url(logo.png);
+}
+/*header(max-width: 400px){
+	display: flex;
+	height: 110px;
+	background-color: black;
+	margin-bottom: 20px;
+	width: 95em;
+}*/
+/*img{
+	align-self: flex-start;
+
+}*/
+ul{
+	margin-left: 37.25em;
+	margin-bottom: 0em;
+	display: flex;
+	justify-content: flex-end;
+}
+.navi{
+	display: inline-block;
+	padding: 2em;
+	/*width: 10m;*/
+	height: 90px;
+	color: black;
+	background-color: red;
+	font-size: 1em;
+    text-align: right;
+    /*margin-left: 0.2em;*/
+/*    margin-bottom: 5px;*/
+}
+/*li(max-width: 400px){
+	display: inline-block;
+	padding: 2.5em;
+	width: 10m;
+	color: white;
+	font-size: 1.5em;
+    text-align: right;
+    margin-left: 0.2em;
+    margin-bottom: 5px;
+}*/
+.navi:hover{
+	background-color: white;
+	color:black;
+}
+/*body(max-width: 411px){
+	width: 411px;
+	margin-right: 0em;
+}*/
+#bookstore{
+	display: flex;
+	align-items: flex-start;
+	margin-top: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+p{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5em;
+	margin-top:30px;
+	margin-left: 15px; 
+	color: black;
+}
+.container{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+.new1{
+	width: 500px;
+	height: 300px;
+	margin: 20px;
+	padding: 20px;
+	border: solid 2px rgb(229, 16, 16);
+	transition: all 1s;
+}
+
+.new1:hover {
+	transform: scale(1.1);
+}
+.main{
+	text-align: center;
+	font-size: 5em;
+	font-family: 'Ibarra Real Nova', serif;
+}
+footer{
+	height: 350px;
+}
+li{
+	display: inline-block;
+}
+.modaldia{
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	display: none;
+	right: 0;
+	bottom: 0;
+	overflow: visible;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	width:75%;
+	height:80%;
+	overflow: auto;
+	background-image: url('http://wallpaperheart.com/wp-content/uploads/2018/07/full-hd-background-images.jpg');
+    background-position: center;
+	background-repeat: no-repeat;
+	margin: 7.5% auto 5% auto;
+	border:2px solid rgb(241, 223, 228);
+	border-radius: 7px;
+	
+}
+
+.modaldia:target {
+	opacity:0;
+	pointer-events: auto;
+}
+
+.close {
+	position: relative;
+	float: right;
+	color: rgb(12, 12, 12);
+	right: 19px;
+	z-index: 1002;
+	text-align: center;
+	top: -10px;
+	width: 10px;
+	text-decoration: none;
+	font-size: 30px;
+}
+.close:hover,.close:focus{
+	color:rgb(7, 7, 7);
+	cursor:pointer;
+	text-decoration: none;
+}
+
+#openmodal .btn {
+	background-color: grey;
+	border: none;
+	color: white;
+	padding: 12px 16px;
+	font-size: 16px;
+	margin: 5px 0px 0 5px;
+	cursor: pointer;  
+  }
+  /* Darker background on mouse-over */
+#openmodal .btn:hover {
+	background-color: RoyalBlue;
+  }
+#openmodal .container{
+	position: absolute;
+	width: 100%;	
+	
+	margin-top: 10%;
+	max-width: 400px;
+  }
+	  
+#openmodal .image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+  }
+  
+#openmodal .cont .container:hover .image {
+	opacity: 0.5;
+  }
+  
+#openmodal .cont .container .btn {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color:grey;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+  }
+  
+#openmodal .cont .container .btn:hover {
+	background-color: black;
+  }
+#openmodal .cont .container1{
+	position: absolute;
+	width: 100%;	
+	margin-left: 40%;
+	margin-top: 10%;
+	max-width: 240px;
+  }
+	  
+#openmodal .cont .container1 img {
+	width: 100%;
+	height: auto;
+  }
+#openmodal .cont .image1 {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+  }
+
+#openmodal .cont .container1:hover .image1 {
+	opacity: 0.5;
+  }
+
+#openmodal-content{
+	margin: 5% auto;
+	width: 85% ;
+	box-shadow: 0 5px 8px 0 rgba(29, 26, 26, 0.8);
+}  
+#openmodal .cont .container1 .btn {
+	position: absolute;
+	top: 90%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color:grey;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+  }
+  
+#openmodal .cont .container1 .btn:hover {
+	background-color: black;
+  }
+#openmodal .cont{
+	width: 75%;
+	margin-left: 12.5%;
+}  
+#openmodal h1 {
+	color:#555;
+	font-family: tamato;
+	font-size: 400%;
+  }
+#openmodal p  {
+	color: red;
+	font-family: courier;
+	font-size: 160%;
+  }

@@ -1,0 +1,34 @@
+<%- include('partials/header'); %>
+<!--<script type="text/javascript">
+	$(document).ready(() => {
+		$.ajax({
+			url:"/home",
+			type: "GET",
+		});
+      $("input[name='submt']").click(() => {
+		  backroll= document.getElementsByName("Roll No.").values;
+		  $.ajax({
+			  url:"/signin",
+			  type: "POST",
+			  dataType: "json"
+		  });
+	  });
+	});
+</script>-->
+<div ><img src="/imcss/logo.png" width="1550px" ;></div><hr>
+	<div>
+<hr>
+<center style=" margin-top: 10em; margin-bottom: 10em;">
+<div class="box">
+	<h2>Login</h2><br><br>
+	<form style="width: 300px; margin-right: 0px;" method="post" action="/signin">
+	<pre>Username:   <input type="placeholder" placeholder="Roll No." name="Rollno" style="width: 120px; height: 15px;"></pre>
+	<pre>Password:   <input type="Password" placeholder="password" name="password"  style="width: 120px; height: 15px;"></pre>
+	<pre>                <a href="#">Need Help?</a></pre>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+	<br>
+	<pre><a href="/signup">Create Account</a>       <input type="submit" value="Login" name="submt" style="font-size:80%;"></pre>    
+</form>
+</div>
+</center>
+<%- include('partials/footer'); %>

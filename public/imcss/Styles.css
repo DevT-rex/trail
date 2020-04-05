@@ -1,0 +1,40 @@
+body{
+	width:100%;
+	margin: 0px 0px;
+}
+div{
+	font-family: "Arial Narrow";
+}
+hr{
+	margin: 0px;
+}
+.Header{
+	color: white;
+	background-image: url(logo.png);
+	background-size: cover;
+/*	line-height: 3rem;*/
+	font-size: 9rem;
+	text-align: center;
+	font-family: "Arial Narrow";
+	margin: 0px 0px 0px 0px;
+	height: 15rem;
+
+}
+li{
+	list-style: none;
+	display: inline-flex;
+	margin: 2px 2px 2px 2px;
+	padding: 2px;
+}
+.list1{
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+	padding-left: 0px;
+	justify-content: space-around;
+}
+.cl1{
+	text-align: right;
+}
+.cl2{
+	text-align: left;
+}

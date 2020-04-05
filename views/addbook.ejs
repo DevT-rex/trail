@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/imcss/nsut_logo.png" />
+	<title>NSUT-HUB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/imcss/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style >
+.search-container {
+  float: right;
+  border: hidden;
+  float: left;
+   }
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid grey;
+  padding: 15px; 
+  width: 200px;
+  height: 0px;  
+}
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: none;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: grey ;
+}
+@media screen and (max-width: 800px) {
+.search-container {
+    float: left;
+  }
+.search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+}
+form{
+width:420px;
+height:auto;
+background-color:white;
+border-style:solid;
+border-width:4px;
+box-shadow:7px 7px 7px black;
+margin-left: 35%;
+}
+.input{
+width:300px;
+border-style:solid;
+}
+.margin{
+margin-right:7px;
+}
+.footer{
+width:100%;
+height:auto;
+background-color:black;
+}
+.cent{
+  margin-left: 45%;
+}
+</style>	
+</head>
+<body>
+<!--   <script>
+    $(".btun").click(()=>{
+        $.ajax({
+           type:"POST",
+           dataType: "json"
+        });
+    });
+  </script> -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="/home" class="w3-bar-item w3-button">NSUT-HUB</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right ">
+      <div class="search-container">
+      <input type="text" placeholder="Search.." class="rcorners2" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <a href="/aboutus" class="w3-bar-item w3-button">About Us</a>
+      <a href="#" class="w3-bar-item w3-button">Downloads</a>
+      <a href="#" class="w3-bar-item w3-button">Join Us</a>
+      <a href="/profile/:roll" class="w3-bar-item w3-button"><i class="fa fa-fw fa-user"></i>Profile</a>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>
+<h2 class="cent"> &nbsp<b> Add A Book </b> </h2>
+<br><br>
+<table>
+<td>
+<form action="/profile/addbook" method="post"></form>  
+<form method="post" enctype="multipart/form-data">
+<center>
+<li>
+Img1:
+<input type="file" name="fileToUpload" id="fileToUpload">
+<br><br>
+<input type="submit" value="Upload file" name="submit">
+</form>
+</li>
+<br>
+<li>
+Img2:
+<input type="file" name="fileToUpload" id="fileToUpload">
+<br><br>
+<input type="submit" value="Upload file" name="submit">
+</form>
+</li>
+<br>
+<li>
+Img3:
+<input type="file" name="fileToUpload" id="fileToUpload">
+<br><br>
+<input type="submit" value="Upload file" name="submit">
+</form>
+</li>
+</center>
+<?php
+$file=$_FILES["fileToUpload"]["name"];
+$loc="Uploaded files/";
+$path=$loc.$file;
+if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'],$path))
+{
+print "Uploaded";
+}
+else
+{
+print "Not uploaded";
+}
+?>
+<br><br>
+<center>
+Name: &nbsp <input type="text" style="margin-right:91px;" required name="name">
+<br><br>
+Cost: &nbsp <input type="number" style="margin-right:81px;" required name="cost">
+<br><br>
+Edition: &nbsp <input type="text" style="margin-right:100px;" required name="edition">
+<br><br>
+Contact No.: &nbsp <input type="text" style="margin-right:140px;" id="password" required name="contact_no">
+<br><br>
+<input type="submit">
+<br><br>
+</center>
+<%- include('partials/footer') %>

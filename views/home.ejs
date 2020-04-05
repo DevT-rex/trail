@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/imcss/nsut_logo.png" />
+	<title>NSUT-HUB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/imcss/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="/imcss/new.css">
+<style >
+
+.search-container {
+  float: left;
+  border: hidden;
+  
+   }
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid grey;
+  padding: 15px; 
+  width: 100px;
+  height: 0px;  
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.rcorners2:focus {
+  width: 200px;
+}
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+ 
+  margin-right: 16px;
+  background: none;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: grey ;
+}
+@media screen and (max-width: 800px) {
+.search-container {
+    float: left;
+  }
+.search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+}
+</style>	
+
+<script src="bookst.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <script>
+  var input = document.getElementsByName("search").values;
+   $(".book").onclick(()=>{
+       $.ajax({
+           url:"/getbooks/"+input[0],
+           type="GET"
+       });
+   });
+</script>
+</head>
+<body>
+<div class="w3-top ">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="/home" class="w3-bar-item w3-button">NSUT-HUB</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right ">
+      <div class="search-container">
+      	<form>
+      <input type="text" name="search" placeholder="Search.." class="rcorners2">
+      <button type="submit" class="book"><i class="fa fa-search"></i></button>
+  		</form>
+      </div>
+      <a href="/aboutus" class="w3-bar-item w3-button">About Us</a>
+      <a href="/home" class="w3-bar-item w3-button">Downloads</a>
+      <a href="/joinus" class="w3-bar-item w3-button">Join Us</a>
+      <!-- Example single danger button -->
+      <div class="btn-group csk " style="position:static;" >
+         <button type="button" class="btn btn-danger dropdown-toggle cli" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class="fa fa-fw fa-user"></i>
+         Profile
+        </button>
+        <div class="dropdown-menu csk">
+           <a class="dropdown-item cli" style="font-weight: bold;" href="/profile/show"><%=temp%></a>
+          <a class="dropdown-item cli" href="/profile/show">view Profile</a>
+        <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-danger" style="font-weight: bold;" href="/start">Sign Out</a>
+        </div>
+     </div>
+
+    </div>
+
+  </div>
+</div>
+
+<br><br>
+<div ><img src="/imcss/logo.png" width="1550px" ;></div>
+<div style="margin-left: 15px; margin-top: 75px;">
+	<br><img src="/imcss/nsut_logo.png" width="250px" height="250px" style="margin-left: 39em;">
+<h1 class="main" style="color: black; text-decoration: underline red; font-family: bitter;">A Guide Book To NSUT</h1>
+<br>
+<br>
+<div id="bookstore">
+    <img src="/imcss/assi.png" width="400px" height="300px" class="new1">
+  <p ><strong>Do assignments bore you? Want them to be done by others at a cheap price?
+Look no further, NSUT-HUB has come up with the ASSIGNMENT STORE. A platform which provides low cost assignment done by experts.<a href="#" style="color:red; text-decoration: underline;"target="_blank"> <em>Read more</em></a> </strong></p>
+</div>
+<hr>
+<div id="bookstore">
+<div class="container">
+    <a class="clik" href="/profile/addbook"><img src="/imcss/addbook.png" width="550px" height="350px" class="new1"></a>
+    <a class="clik" href="/"><img src="/imcss/sellbook.png" width="550px" height="350px" class="new1"></a>
+  </div>
+ </div> 
+</div>
+<hr>
+<h1 class="main">Other Useful Resources</h1>
+	<div class="container">
+		<img src="/imcss/note.png" width="550px" height="350px" class="new1">
+		<img src="/imcss/ques.png" width="550px" height="350px" class="new1">
+	</div>
+	<br>
+	<div class="container">
+		<img src="/imcss/e-book.png" width="550px" height="350px" class="new1">
+		<img src="/imcss/course.png" width="550px" height="350px" class="new1">
+	</div>
+	<br>
+	<div class="container">
+		<img src="/imcss/stuff.png" width="550px" height="350px" class="new1">
+		<img src="/imcss/event.png" width="550px" height="350px" class="new1">
+	</div>

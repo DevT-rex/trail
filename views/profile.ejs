@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NSUT HUB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/imcss/Styles.css">
+	<link rel="stylesheet" type="text/css" href="/imcss/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="/imcss/profile.css">
+<style>
+body{background-color: black;
+  
+}
+#input1{
+  width: 100%;
+text-align: center;
+  padding: 5px 10px;
+  margin: right;
+  display: inherit;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button {
+         background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+#button0 {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+#button0:hover {
+  background-color: #45a049;
+}
+#div9{
+	margin:20em;
+	margin-top: 1em; 
+	margin-bottom: 1em;
+  border-radius: 5px;
+  background-color: grey;
+  padding: 20px;
+}
+#h3{
+	margin-top: 2em;
+	color: white;
+}
+#label0{
+	color: white;
+	font-family:sen;
+}
+</style>	
+<script>
+  var input = document.getElementsByName("search").values;
+   $(".book").onclick(()=>{
+       $.ajax({
+           url:"/getbooks/"+input[0],
+           type="GET"
+       });
+   });
+</script>
+
+</head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="/home" class="w3-bar-item w3-button">NSUT-HUB</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right ">
+       <div class="search-container">
+      <input type="text" placeholder="Search.." class="rcorners2" name="search">
+      <button type="submit" class="book"><i class="fa fa-search"></i></button>
+      </div>
+      <a href="/aboutus" class="w3-bar-item w3-button">About Us</a>
+      <a href="/joinus" class="w3-bar-item w3-button">Join Us</a>
+      <a href="/home" class="w3-bar-item w3-button">Downloads</a>
+      <a href="/profile/:roll" class="w3-bar-item w3-button"><i class="fa fa-fw fa-user"></i>Profile</a>     
+    </div>
+  </div>
+</div>
+<br><br>
+
+		<h3 id="h3" style="text-align: center;">Profile Overview</h3><hr>
+		<div id="div9">
+    <form name="Profile" class="input" >
+    <div id="div0" ><label id="label0">First Name</label><input id="input1" type="text"  placeholder="<%=FirstName%>"></div>
+    <div id="div0" ><label id="label0">Last Name</label><input id="input1" type="text"  placeholder="<%=LastName%>"></div>
+    <div id="div0"><label id="label0">Email</label><input id="input1" type="text"  placeholder="<%=email%>"></div>
+    <div id="div0"><label id="label0">Roll No.</label><input id="input1" type="text"  placeholder="<%=Rollno%>"></div>
+    <div id="div0"><label id="label0">Mobile No.</label><input id="input1" type="text"  placeholder="<%=mobileno%>"></div>
+    <div id="div0"><button id="button0"><a style="text-decoration: none;" href="/home">Save Profile</a></button>
+        <a href="/home">Cancel</a>
+	    </form>
+		</div>
+	<br><br><br><br><br><br><br>
+<%- include('partials/footer') %>
